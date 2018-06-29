@@ -1,0 +1,256 @@
+/* ====================================
+   Main container
+   ==================================*/
+
+.container {
+	background: #fff;
+	box-shadow: 2px 2px 5px 0px rgba(216,216,216,1);
+	display: flex;
+	height: 110px;
+	margin: 0 auto 10px;
+	max-width: 1200px;
+	position: relative;
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		height: 245px;
+		width: 360px;
+	}
+}
+
+/* ====================================
+   Yellow category label
+   ==================================*/
+
+.category {
+	background: #FFBE33;
+	color: #fff;
+	height: 100%;
+	position: absolute;
+	width: 20px;
+	span {
+		color: #fff;
+		font-size: 10px;
+    left: 55%;
+    line-height: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 51%;
+		transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+	}
+}
+
+/* ====================================
+   Currency description
+   ==================================*/
+
+.description {
+	padding: 19px 75px 15px 42px;
+	width: 316px;
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+	  padding: 15px 5px 20px 42px;
+	  width: 230px;
+	}
+	@media screen and (max-width: 767px) {
+		order: 1;
+		padding: 15px 75px 16px 40px;
+	}
+	.title {
+		line-height: 20px;
+		margin: 0 0 5px;
+		font-size: 14px;
+	}
+	.details {
+		font-size: 10px;
+		&:last-of-type {
+			@media screen and (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+}
+
+.umbrella  {
+	display: inline;
+  svg {
+		font-size: 9px;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+	}
+}
+.yellow-circle {
+	background: #ffbe33;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 9px;
+	height: 7px;
+	margin: 0 4px 0 0;
+	width: 7px;
+}
+
+/* ====================================
+   Currency Data
+   ==================================*/
+
+.data {
+	flex-grow: 1;
+	@media screen and (max-width: 767px) {
+		border-top: 1px solid #d8d8d8;
+		margin: 15px 18px 0 36px;
+		order: 3;
+	}
+	ul {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		li {
+			border-right: 1px solid #d8d8d8;
+			flex-grow: 1;
+			height: 74px;
+			list-style-type: none;
+			margin: 18px 0;
+			padding: 15px 0 0;
+	    text-align: center;
+	    @media screen and (max-width: 767px) {
+	    	margin: 15px 0;
+	    	padding: 15px 0 0;
+	    }
+		  &:first-of-type {
+			  border-left: 1px solid #d8d8d8;
+			  flex-grow: 1.7;
+				font-size: 8px;
+		  	@media screen and (max-width: 767px) {
+		  		border-left: none;
+		  		flex-grow: 0.7;
+		  		padding: 15px 0 0 10px;
+		  		text-align: left;
+		  	}
+		  }
+		  &:nth-of-type(3) {
+		  	@media screen and (max-width: 767px) {
+		  		flex-grow: 0.6;
+		  		text-align: right;
+		  		padding: 15px 10px 0 0;
+		  	}
+		  }
+		  &:nth-of-type(n+4) {
+		    @media screen and (max-width: 767px) {
+		    	display: none;
+		    }
+		  }
+		  &:nth-of-type(3) {
+		  	@media screen and (max-width: 767px) {
+		  		border-right: none;
+		  	}
+		  }
+		}
+		.currency {
+			display: inline;
+			font-size: 8px;
+			@media screen and (max-width: 767px) {
+				font-size: 9px;
+			}
+		}
+		span {
+			display: block;
+			&:last-of-type {
+				margin: 3px 0 0;
+				@media screen and (max-width: 767px) {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.data-container {
+	display: inline-block;
+}
+
+.currency-value {
+	color: #d93b56;
+}
+
+.data-value {
+	font-size: 19px;
+	font-weight: bold;
+	mark {
+		font-size: 19px;
+	}
+}
+
+.data-description {
+  font-size: 10px;
+}
+
+/* ====================================
+   Button and options
+   ==================================*/
+
+.options {
+	@media screen and (max-width: 767px) {
+		order: 2;
+	}
+	button {
+		background: linear-gradient(to right, rgba(221,28,61,1) 0%,rgba(244,112,105,1) 100%);
+		border: none;
+		border-radius: 5px;
+		box-shadow: 0px 2px 6px 0px rgba(252,204,188,0.75);
+		color: #fff;
+		font-size: 9px;
+		height: 34px;
+		margin: 24px 18px 0 18px;
+		text-transform: uppercase;
+		width: 76px;
+		&:hover {
+			box-shadow: 0px 4px 12px 1px rgba(204,195,192,1);
+			transition: box-shadow 0.25s
+		}
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			margin: 25px 10px 0;
+		}
+		@media screen and (max-width: 767px) {
+			margin: 0 22px 0 35px;
+			width: 310px;
+		}
+	}
+}
+
+.eye-outline, .scale-balance {
+	bottom: 22px;
+	color: #d8d8d8;
+	height: 18px;
+	position: absolute;
+	&:hover {
+		transition: color 0.25s;
+	}
+	svg {
+		font-size: 18px;
+	}
+}
+
+.eye-outline {
+	right: 65px;
+	&:hover {
+		color: #7ed321;
+	}
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+		right: 60px;
+	}
+	@media screen and (max-width: 767px) {
+		right: 15px;
+		top: 20px;
+	}
+}
+
+.scale-balance {
+	right: 30px;
+	&:hover {
+		color: #4a90e2;
+	}
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+		right: 25px;
+	}
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
